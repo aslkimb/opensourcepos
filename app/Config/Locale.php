@@ -17,17 +17,17 @@ class Locale extends BaseConfig
     public array $supportedLocales = ['en'];
 
     /**
-     * If true, localization will be determined from the HTTP request
+     * Whether to trust the browser's language preference.
      */
     public bool $negotiateLocale = false;
 
     /**
-     * The name of the query parameter for language switching
+     * Locale cookie name
      */
-    public string $supportedLocalesList = 'lang';
+    public string $cookieName = 'ci_lang';
 
     /**
-     * The name of the cookie for language switching
+     * Segment index for locale in URL (if using segment negotiation)
      */
-    public string $cookieName = 'ci_session';
+    public int $urlSegment = 1;
 }
